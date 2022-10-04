@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/cs1300-personas/static/css/main.af5de658.css",
+    "main.js": "/cs1300-personas/static/js/main.d58002f8.js",
+    "static/js/787.1ed0c42c.chunk.js": "/cs1300-personas/static/js/787.1ed0c42c.chunk.js",
+    "static/media/persona-andrews.png": "/cs1300-personas/static/media/persona-andrews.32c5681fc396e82e0e26.png",
+    "static/media/persona-sketch.png": "/cs1300-personas/static/media/persona-sketch.fc5390dfea3ff14b737f.png",
+    "static/media/personas-6.png": "/cs1300-personas/static/media/personas-6.1189eec61ed9ac79f3f3.png",
+    "static/media/personas-1.png": "/cs1300-personas/static/media/personas-1.e72e610c5740e3bb1e84.png",
+    "static/media/persona-harry.png": "/cs1300-personas/static/media/persona-harry.70ac0aa7d7a57f9d4a59.png",
+    "static/media/personas-10.png": "/cs1300-personas/static/media/personas-10.1c1dc78706e51845d8a1.png",
+    "static/media/personas-9.png": "/cs1300-personas/static/media/personas-9.abc343a5cde2b1441934.png",
+    "static/media/persona-ian.png": "/cs1300-personas/static/media/persona-ian.72ff0305a450b470be1a.png",
+    "static/media/personas-8.png": "/cs1300-personas/static/media/personas-8.39f0055b27e97b484987.png",
+    "static/media/personas-4.png": "/cs1300-personas/static/media/personas-4.17ecafa372024bec23e2.png",
+    "static/media/personas-5.png": "/cs1300-personas/static/media/personas-5.d3b960ce803064df9b3d.png",
+    "static/media/personas-2.png": "/cs1300-personas/static/media/personas-2.c4d801d96595bc777fe0.png",
+    "static/media/personas-3.png": "/cs1300-personas/static/media/personas-3.f044edd00b7b845d1e8c.png",
+    "static/media/personas-7.png": "/cs1300-personas/static/media/personas-7.f961bcb57cc9fc277218.png",
+    "static/media/logo.svg": "/cs1300-personas/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/cs1300-personas/index.html",
+    "main.af5de658.css.map": "/cs1300-personas/static/css/main.af5de658.css.map",
+    "main.d58002f8.js.map": "/cs1300-personas/static/js/main.d58002f8.js.map",
+    "787.1ed0c42c.chunk.js.map": "/cs1300-personas/static/js/787.1ed0c42c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.af5de658.css",
+    "static/js/main.d58002f8.js"
+  ]
+}
