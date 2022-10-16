@@ -1,0 +1,338 @@
+body html {
+    margin: 0px !important;
+    padding: 0px !important;
+}
+
+#container {
+    width: 100vw;
+    height: 100vh;
+    margin-top: 0px;
+    padding: 0px;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#body {
+    width: 70vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#navBar {
+    width: 100vw;
+    height: 75px;
+    background-color: #1E4276;
+    margin-top: 0px;
+
+    display: flex;
+    align-items: center;
+}
+
+#logo {
+    height: 50%;
+    width: 'auto';
+    margin-left: 40px;
+}
+
+#titleView {
+    width: 100%;
+
+    display: flex;
+    justify-content: flex-start;
+}
+
+#mainWrapper {
+    width: 100%;
+    background-color: #e5e5e5;
+    border-radius: 20px;
+}
+
+#progressBar {
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background-color: #1E4276;
+
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+#progressBar h3 {
+    color: white;
+}
+
+#inputDiv {
+    /* flex-grow: 2; */
+    width: 66%;
+    padding-left: 60px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    box-sizing: border-box;
+}
+
+#summaryDiv {
+    /* flex-grow: 1; */
+    width: 33%;
+    padding-right: 60px;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+#petIcon {
+    font-size: 100px;
+    margin-top: 10%;
+    color: #1E4276;
+}
+
+#btnDiv {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#contentWrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.titleWrapper {
+    width: 100%;
+
+    display: flex;
+    justify-content: flex-start;
+}
+
+.inputBtn {
+    width: 200px;
+    height: 50px;
+    margin-right: 20px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    border-radius: 8px;
+
+    border: #1E4276 solid 2px;
+}
+
+#dateTimeWrapper {
+    width: 100%;
+
+    display: flex;
+    justify-content: flex-start;
+}
+
+#ticketSelectWrapper {
+    width: 70%;
+}
+
+.ticketRow {
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#next {
+    width: 130px;
+    height: 40px;
+    background-color: #1E4276;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-right: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    border: none;
+    border-radius: 10px;
+}
+
+#next h4 {
+    color: white
+}
+
+.summaryRow {
+    width: 100%;
+
+    /* background-color: #b6b2b2; */
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#summaryBody {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    background-color: #b6b2b2;
+    border-radius: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.ticketInput {
+    height: 40px;
+    border-radius: 8px;
+    border: solid gray 2px;
+    padding-left: 10px;
+    outline: none;
+    width: 250px;
+}
+
+.ticketInput:focus {
+    border: solid #1E4276 2px !important;
+    /* background-color: blue; */
+    outline: none;
+}
+
+#nextDisabled {
+    width: 130px;
+    height: 40px;
+    background-color: gray;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-right: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    border: none;
+    border-radius: 10px;
+}
+
+#nextDisabled h4 {
+    color: white
+}
+
+#next:hover,
+#next:focus {
+    background-color: white;
+    border: #1E4276 solid 2px;
+    cursor: pointer;
+}
+
+#next:hover h4,
+#next:focus h4 {
+    color: #1E4276;
+}
+
+.inputBtn:hover {
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1323px) {
+    /* #mainWrapper {
+        width: 100%;
+    } */
+
+    #contentWrapper {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #inputDiv {
+        width: 100%;
+    }
+
+    #summaryDiv {
+        width: 100%;
+        padding-right: 0;
+        margin-top: 20px;
+    }
+
+    #petIcon {
+        margin-top: 0px;
+    }
+}
+
+@media screen and (max-width: 883px) {
+    #ticketSelectWrapper {
+        width: 90%;
+    }
+
+    #mainWrapper {
+        width: 100%;
+        background-color: #e5e5e5;
+        border-radius: 10px;
+    }
+
+    #progressBar {
+        width: 100%;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        background-color: #1E4276;
+
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+}
+
+@media screen and (max-width: 752px) {
+    .ticketInput {
+        width: 40%
+    }
+
+    .inputBtn {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    #inputDiv {
+        padding-left: 30px;
+    }
+
+    #summaryDiv {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    #dateTimeWrapper {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #body {
+        width: 85vw;
+        padding-bottom: 100px;
+    }
+
+    #progressBar h3 {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 558px) {
+    #progressBar h3 {
+        font-size: 11px;
+    }
+
+    #progressBar {
+        height: 40px
+    }
+}

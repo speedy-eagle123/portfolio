@@ -19,12 +19,24 @@ import Typography from '@mui/material/Typography'
 import PersonSearchIcon from '@mui/icons-material/PersonSearch'
 import { colors } from '../constants/Colors'
 import Personas from './Personas'
+import BrushIcon from '@mui/icons-material/Brush';
+import Responsive from './Responsive'
 
 const drawerWidth = 240
 
 function Home(props) {
 	const { window } = props
 	const [mobileOpen, setMobileOpen] = React.useState(false)
+	const projects = [
+		// {
+		// 	title: 'Personas',
+		// 	icon: <PersonSearchIcon style={{ color: colors.text }} />
+		// },
+		{
+			title: 'Responsive Redesign',
+			icon: <BrushIcon style={{ color: colors.text }} />
+		}
+	]
 
 	const handleDrawerToggle = () => {
 		setMobileOpen(!mobileOpen)
@@ -35,13 +47,13 @@ function Home(props) {
 			<Toolbar />
 			<Divider />
 			<List>
-				{['Personas'].map((text, index) => (
-					<ListItem key={text} disablePadding>
+				{projects.map((item, index) => (
+					<ListItem key={item.title} disablePadding>
 						<ListItemButton>
 							<ListItemIcon>
-								<PersonSearchIcon style={{ color: colors.text }} />
+								{item.icon}
 							</ListItemIcon>
-							<ListItemText primary={text} style={{ color: colors.text }} />
+							<ListItemText primary={item.title} style={{ color: colors.text }} />
 						</ListItemButton>
 					</ListItem>
 				))}
@@ -123,7 +135,8 @@ function Home(props) {
 				}}
 			>
 				<Toolbar />
-				<Personas />
+				{/* <Personas /> */}
+				<Responsive />
 			</Box>
 		</Box>
 	)
