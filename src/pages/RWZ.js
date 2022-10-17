@@ -117,7 +117,7 @@ function ProgressBar() {
         <div id={styles.progressBar}>
             {titles.map((title) => {
                 return (
-                    <h3>{title}</h3>
+                    <h3 style={{ textDecoration: title === titles[1] ? 'underline' : 'none' }}>{title}</h3>
                 )
             })}
         </div>
@@ -176,6 +176,16 @@ function SummarySection({ rows }) {
             </div>
         )
     }
+
+    let total = 0
+    rows.forEach(row => {
+        let tmp = row.value
+        tmp = parseFloat(tmp.slice(1))
+        total += tmp
+    });
+
+    total = `$${total.toFixed(2)}`
+
     return (
         <div id={styles.summaryDiv}>
             <h3>Summary:</h3>
@@ -186,6 +196,10 @@ function SummarySection({ rows }) {
                         <h4>{item.value}</h4>
                     </div>
                 ))}
+                <div className={styles.summaryRow} style={{ marginTop: '50px' }}>
+                    <h4>Total</h4>
+                    <h4>{total}</h4>
+                </div>
             </div>
         </div>
     )
@@ -258,7 +272,11 @@ function TicketSelect({
             {titles.map((item) => (
                 <div className={styles.ticketRow}>
                     <h4>{item.title}</h4>
-                    <input onChange={(e) => item.set(e.target.value)} className={styles.ticketInput} />
+                    <input
+                        placeholder={item.title.split(' ')[0] + ' Tickets'}
+                        onChange={(e) => item.set(e.target.value)}
+                        className={styles.ticketInput}
+                    />
                 </div>
             ))}
         </div>

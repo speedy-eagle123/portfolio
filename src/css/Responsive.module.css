@@ -43,3 +43,9 @@
 #link:hover {
     cursor: pointer;
 }
+
+li {
+    color: white;
+    text-align: left;
+    margin-bottom: 15px;
+}
