@@ -5,6 +5,9 @@ import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
 
+import cal from '../assets/cal.png'
+import { colors } from '@mui/material';
+
 export default function RWZ() {
     return (
         <div id={styles.container}>
@@ -164,16 +167,23 @@ function SummarySection({ rows }) {
     if (rows.length === 0) {
         return (
             <div id={styles.summaryDiv} style={{
+                display: 'flex',
                 justifyContent: 'center',
                 alignItems: 'center',
-            }}>
+
+            }
+            }>
                 <div style={{
+                    display: 'flex',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    flexDirection: 'column',
                     width: '100%',
                 }}>
-                    <h3>Select tickets to view your total</h3>
+                    <h1 style={{ textAlign: 'center', color: 'gray' }}>Select tickets to view your total</h1>
                     <PetsIcon id={styles.petIcon} />
                 </div>
-            </div>
+            </div >
         )
     }
 
@@ -217,44 +227,32 @@ function BtnSection({ enabled }) {
 
 function DateSelect() {
     const [show, setShow] = useState(false)
-
-    const weeks = [1, 2, 3, 4]
-    const days = [1, 2, 3, 4, 5, 6, 7]
     return (
-        <div>
-            <button className={styles.inputBtn} onClick={() => setShow(!show)}>
-                <CalendarMonthIcon style={{ color: '#1e4276' }} />
-                <h4>October 31st</h4>
-                <ArrowDropDownIcon />
-            </button>
-            {show && (
-                <div style={{ width: 200, borderRadius: 8, overflow: 'hidden', marginTop: 10 }}>
-                    {weeks.map(() => (
-                        <div style={{ width: 200, height: 'auto', display: 'flex', flexDirection: 'row' }}>
-                            {
-                                days.map(() => (
-                                    <div
-                                        style={{
-                                            width: 200 / 7,
-                                            aspectRatio: 1,
-                                            backgroundColor: 'red'
-                                        }}
-                                    />
-                                ))
-                            }
-                        </div>
-                    ))}
-                </div>
-            )}
-        </div>
+        <button className={styles.inputBtn} onClick={() => setShow(!show)}>
+            <CalendarMonthIcon style={{ color: '#1e4276' }} />
+            <h4>October 31st</h4>
+            <ArrowDropDownIcon />
+        </button>
     )
 
 
 }
 
 function TimeSelect() {
+    const [show, setShow] = useState(false)
+    const times = [
+        '6:00 PM - 7:00 PM',
+        '7:00 PM - 8:00 PM',
+        '8:00 PM - 9:00 PM',
+        '9:00 PM - 10:00 PM'
+    ]
+
     return (
-        <button className={styles.inputBtn}>
+        <button
+            className={styles.inputBtn}
+            id={styles.time}
+        // onClick={() => setShow(!show)} 
+        >
             <AccessTimeIcon style={{ color: '#1e4276' }} />
             <h4>8:00 pm - 9:00 pm</h4>
             <ArrowDropDownIcon />
@@ -298,7 +296,7 @@ function TicketSelect({
         <div id={styles.ticketSelectWrapper}>
             {titles.map((item) => (
                 <div className={styles.ticketRow}>
-                    <h4>{item.title}</h4>
+                    <h4 style={{ width: '50%' }}>{item.title}</h4>
                     <input
                         placeholder={item.title.split(' ')[0] + ' Tickets'}
                         onChange={(e) => item.set(e.target.value)}

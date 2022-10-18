@@ -6,8 +6,8 @@ body html {
 #container {
     width: 100vw;
     height: 100vh;
-    margin: 0px !important;
-    padding: 0px !important;
+    margin-top: 0px;
+    padding: 0px;
 
     display: flex;
     align-items: center;
@@ -84,8 +84,10 @@ body html {
 
     display: flex;
     align-items: center;
+    justify-content: center;
     flex-direction: column;
     box-sizing: border-box;
+
 }
 
 #petIcon {
@@ -114,9 +116,8 @@ body html {
 }
 
 .inputBtn {
-    width: 200px;
+    flex-grow: 1;
     height: 50px;
-    margin-right: 20px;
 
     display: flex;
     flex-direction: row;
@@ -128,8 +129,12 @@ body html {
     border: #1E4276 solid 2px;
 }
 
+#time {
+    margin-left: 20px;
+}
+
 #dateTimeWrapper {
-    width: 100%;
+    width: 70%;
 
     display: flex;
     justify-content: flex-start;
@@ -184,7 +189,7 @@ body html {
     flex-direction: column;
     justify-content: center;
 
-    background-color: #dfdada;
+    background-color: #d4d1d1;
     border-radius: 10px;
     padding-left: 15px;
     padding-right: 15px;
@@ -196,7 +201,8 @@ body html {
     border: solid gray 2px;
     padding-left: 10px;
     outline: none;
-    width: 250px;
+
+    flex-grow: 1;
 }
 
 .ticketInput:focus {
@@ -255,27 +261,42 @@ body html {
 
     #inputDiv {
         width: 100%;
+        padding-right: 50px;
     }
 
     #summaryDiv {
         width: 100%;
-        padding-right: 0;
         margin-top: 20px;
+
+
     }
 
     #petIcon {
         margin-top: 0px;
     }
+
+    .inputBtn {
+        flex-grow: 1;
+    }
+
+    #ticketSelectWrapper {
+        width: 100%;
+    }
+
+    .ticketInput {
+        flex-grow: 1;
+    }
+
+    #dateTimeWrapper {
+        width: 100%;
+    }
 }
 
 @media screen and (max-width: 883px) {
-    #ticketSelectWrapper {
-        width: 90%;
-    }
+
 
     #mainWrapper {
         width: 100%;
-        background-color: #e5e5e5;
         border-radius: 10px;
     }
 
@@ -293,9 +314,7 @@ body html {
 }
 
 @media screen and (max-width: 752px) {
-    .ticketInput {
-        width: 40%
-    }
+
 
     .inputBtn {
         width: 80%;
@@ -315,6 +334,10 @@ body html {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+    }
+
+    #time {
+        margin-left: 0px;
     }
 
     #body {

@@ -312,6 +312,7 @@ export default function Responsive() {
                 <div class={styles.section} style={{ backgroundColor: colors.secondary }}>
                     <div id={styles.titleWrapper}>
                         <h2 style={{ color: colors.text }}>High-Fidelity Prototypes:</h2>
+                        <h3 style={{ color: colors.text }}>Note: I decided to create mockups for three different screens in the checkout process to best illustrate the redesigned site. However, I did not wireframe nor resdesign all three. The Figma representations are meerly a demonstration of what could be created.</h3>
                     </div>
                 </div>
 
@@ -377,7 +378,7 @@ export default function Responsive() {
 
                             {fIPAD.map((i, idx) => (
                                 <div style={{ justifyContent: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center', marginBottom: 15 }}>
-                                    <img src={i} class={styles.image} style={{ width: '30vw' }} />
+                                    <img src={i} class={styles.image} style={{ width: idx === 0 ? '40vw' : '30vw' }} />
                                     {/* <div style={{ width: '50%' }}>
                                         <h4 style={{ color: colors.text, }}>{captions[idx]}</h4>
                                     </div> */}
@@ -413,7 +414,7 @@ export default function Responsive() {
 
                             {fIPHONE.map((i, idx) => (
                                 <div style={{ justifyContent: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center', marginBottom: 15 }}>
-                                    <img src={i} class={styles.image} style={{ width: '30vw' }} />
+                                    <img src={i} class={styles.image} style={{ width: idx < 2 ? '50vw' : '25vw' }} />
                                     {/* <div style={{ width: '50%' }}>
                                         <h4 style={{ color: colors.text, }}>{captions[idx]}</h4>
                                     </div> */}
