@@ -32,7 +32,7 @@ function NavBar() {
 function TitleView() {
     return (
         <div id={styles.titleView}>
-            <h1>General Admission</h1>
+            <h1 style={{ color: '#313131' }}>General Admission</h1>
         </div>
     )
 }
@@ -202,8 +202,8 @@ function SummarySection({ rows }) {
             <div id={styles.summaryBody}>
                 {rows.map((item) => (
                     <div className={styles.summaryRow}>
-                        <h4>{item.title}</h4>
-                        <h4>{item.value}</h4>
+                        <h4 style={{ fontWeight: 400 }}>{item.title}</h4>
+                        <h4 style={{ fontWeight: 400 }}>{item.value}</h4>
                     </div>
                 ))}
                 <div className={styles.summaryRow} style={{ marginTop: '50px' }}>
