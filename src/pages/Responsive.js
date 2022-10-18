@@ -34,7 +34,7 @@ import wf3 from '../assets/wf3.png'
 
 import Carousel from 'react-material-ui-carousel'
 import { Accordion, AccordionDetails, AccordionSummary, Typography } from '@mui/material'
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 export default function Responsive() {
     const rwz = [rwz1, rwz2, rwz3]
@@ -45,6 +45,17 @@ export default function Responsive() {
     const wf = [wf1, wf2, wf3]
 
     const [expandAll, setExpandAll] = useState(false)
+    const [expand1, setExpand1] = useState(false)
+    const [expand2, setExpand2] = useState(false)
+    const [expand3, setExpand3] = useState(false)
+    const [expand4, setExpand4] = useState(false)
+
+    useEffect(() => {
+        setExpand1(expandAll)
+        setExpand2(expandAll)
+        setExpand3(expandAll)
+        setExpand4(expandAll)
+    }, [expandAll])
 
     return (
         <div id={styles.container} style={{ backgroundColor: colors.background }}>
@@ -119,7 +130,7 @@ export default function Responsive() {
                         textAlign: 'left'
                     }}>
                         <div style={{ borderRadius: 5, overflow: 'hidden', marginBottom: 15 }}>
-                            <Accordion expanded={expandAll}>
+                            <Accordion expanded={expandAll || expand1} onClick={() => setExpand1(!expand1)}>
                                 <AccordionSummary
                                     expandIcon={<ExpandMoreIcon style={{ color: colors.text }} />}
                                     aria-controls="panel1a-content"
@@ -147,7 +158,7 @@ export default function Responsive() {
                         </div>
 
                         <div style={{ borderRadius: 5, overflow: 'hidden', marginBottom: 15 }}>
-                            <Accordion expanded={expandAll}>
+                            <Accordion expanded={expandAll || expand2} onClick={() => setExpand2(!expand2)}>
                                 <AccordionSummary
                                     expandIcon={<ExpandMoreIcon style={{ color: colors.text }} />}
                                     aria-controls="panel1a-content"
@@ -175,7 +186,7 @@ export default function Responsive() {
                         </div>
 
                         <div style={{ borderRadius: 5, overflow: 'hidden', marginBottom: 15 }}>
-                            <Accordion expanded={expandAll}>
+                            <Accordion expanded={expandAll || expand3} onClick={() => setExpand3(!expand3)}>
                                 <AccordionSummary
                                     expandIcon={<ExpandMoreIcon style={{ color: colors.text }} />}
                                     aria-controls="panel1a-content"
@@ -203,7 +214,7 @@ export default function Responsive() {
                         </div>
 
                         <div style={{ borderRadius: 5, overflow: 'hidden', marginBottom: 15 }}>
-                            <Accordion expanded={expandAll}>
+                            <Accordion expanded={expandAll || expand3} onClick={() => setExpand4(!expand4)}>
                                 <AccordionSummary
                                     expandIcon={<ExpandMoreIcon style={{ color: colors.text }} />}
                                     aria-controls="panel1a-content"
