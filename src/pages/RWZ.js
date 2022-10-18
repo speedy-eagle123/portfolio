@@ -24,7 +24,7 @@ export default function RWZ() {
 function NavBar() {
     return (
         <div id={styles.navBar}>
-            <img src='https://www.rwpzoo.org/wp-content/uploads/2022/05/logo-w-carousel.png' id={styles.logo} />
+            <img alt='zoo-logo' src='https://www.rwpzoo.org/wp-content/uploads/2022/05/logo-w-carousel.png' id={styles.logo} />
         </div>
     )
 }
