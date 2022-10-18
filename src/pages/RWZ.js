@@ -216,13 +216,40 @@ function BtnSection({ enabled }) {
 }
 
 function DateSelect() {
+    const [show, setShow] = useState(false)
+
+    const weeks = [1, 2, 3, 4]
+    const days = [1, 2, 3, 4, 5, 6, 7]
     return (
-        <button className={styles.inputBtn}>
-            <CalendarMonthIcon style={{ color: '#1e4276' }} />
-            <h4>October 31st</h4>
-            <ArrowDropDownIcon />
-        </button>
+        <div>
+            <button className={styles.inputBtn} onClick={() => setShow(!show)}>
+                <CalendarMonthIcon style={{ color: '#1e4276' }} />
+                <h4>October 31st</h4>
+                <ArrowDropDownIcon />
+            </button>
+            {show && (
+                <div style={{ width: 200, borderRadius: 8, overflow: 'hidden', marginTop: 10 }}>
+                    {weeks.map(() => (
+                        <div style={{ width: 200, height: 'auto', display: 'flex', flexDirection: 'row' }}>
+                            {
+                                days.map(() => (
+                                    <div
+                                        style={{
+                                            width: 200 / 7,
+                                            aspectRatio: 1,
+                                            backgroundColor: 'red'
+                                        }}
+                                    />
+                                ))
+                            }
+                        </div>
+                    ))}
+                </div>
+            )}
+        </div>
     )
+
+
 }
 
 function TimeSelect() {

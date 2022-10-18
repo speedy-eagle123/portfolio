@@ -9,19 +9,17 @@ import {
   Route,
   Link
 } from 'react-router-dom';
+import Responsive from './pages/Responsive';
 
 
 function App() {
   return (
-    <div className="App">
-
-      <Router>
-        <Routes>
-          <Route exact path='/' element={<Home />}></Route>
-          <Route exact path='/rwz' element={<RWZ />}></Route>
-        </Routes>
-      </Router>
-    </div>
+    <Router>
+      <Routes>
+        <Route exact path='/' element={<Responsive />}></Route>
+        <Route exact path='/rwz' element={<RWZ />}></Route>
+      </Routes>
+    </Router>
   );
 }
 
