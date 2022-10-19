@@ -5,6 +5,8 @@ import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
 
+import zebra from '../assets/zebra.png'
+
 import cal from '../assets/cal.png'
 import { colors } from '@mui/material';
 
@@ -180,8 +182,9 @@ function SummarySection({ rows }) {
                     flexDirection: 'column',
                     width: '100%',
                 }}>
-                    <h1 style={{ textAlign: 'center', color: 'gray' }}>Select tickets to view your total</h1>
-                    <PetsIcon id={styles.petIcon} />
+                    <h1 style={{ textAlign: 'center', }}>Select tickets to view your total</h1>
+                    {/* <PetsIcon id={styles.petIcon} /> */}
+                    <img src={zebra} style={{ width: '50%', height: 'auto', }} />
                 </div>
             </div >
         )
