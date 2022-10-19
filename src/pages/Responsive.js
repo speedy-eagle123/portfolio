@@ -67,7 +67,7 @@ export default function Responsive() {
                 <div class={styles.section} style={{ backgroundColor: colors.secondary }}>
                     <div id={styles.titleWrapper} style={{ flexDirection: 'column' }}>
                         <h2 style={{ color: colors.text }}>Website to Redesign:</h2>
-                        <h3 style={{ color: colors.text, fontWeight: '600', marginTop: 0 }}>The checkout page for buying tickets to Rodger Williams Zoo</h3>
+                        <h3 style={{ color: colors.text, fontWeight: '600', marginTop: 0 }}>The checkout page for buying tickets to Roger Williams Zoo</h3>
                     </div>
                     <div>
                         <Carousel
@@ -113,7 +113,7 @@ export default function Responsive() {
                     <div>
                         {/* <img src={sketch} class={styles.image} /> */}
                         <h4 style={{ color: colors.text, textAlign: 'left' }}>
-                            I recently went to the 'Jack O Lantern Spectacular' at Rodger Williams Zoo. While purchasing the tickets, I found myself confused when I first landed on the information page. There appeared to be a date select for the visit; however, I didn't see any options for payment or ticket select until scrolling down. I remember thinking that the site looked and felt very unprofessional. If I had not previously been to the Zoo, I would have been slightly worried about putting my card information into the site.
+                            I recently went to the 'Jack O Lantern Spectacular' at the Roger Williams Zoo. While purchasing tickets, I found myself confused when I first landed on the information page. There appeared to be a date select for the visit; however, I didn't see any options for payment or ticket select until scrolling down. I remember thinking that the site looked and felt very unprofessional. If I had not previously been to the Zoo, I would have been slightly worried about putting my card information into the site.
                         </h4>
                     </div>
                 </div>
@@ -204,7 +204,7 @@ export default function Responsive() {
                                 >
                                     <div style={{ textAlign: 'left' }}>
                                         <ul>
-                                            <li style={{ color: colors.text }}>Overall, the checkout screens on the Rodger Williams Zoo site leaves a bad impression.</li>
+                                            <li style={{ color: colors.text }}>Overall, the checkout screens on the Roger Williams Zoo site leaves a bad impression.</li>
                                             <li style={{ color: colors.text }}>Purchasing tickets through the site left me slightly worried about how my payment privacy was being ensured.</li>
                                             <li style={{ color: colors.text }}>Additionally, the styling of the website itself left more to be desired. The use of bright green and yellow coloring with sharp boarders was not a pleasing experience from a UI perspective.</li>
                                         </ul>
@@ -214,7 +214,7 @@ export default function Responsive() {
                         </div>
 
                         <div style={{ borderRadius: 5, overflow: 'hidden', marginBottom: 15 }}>
-                            <Accordion expanded={expandAll || expand3} onClick={() => setExpand4(!expand4)}>
+                            <Accordion expanded={expandAll || expand4} onClick={() => setExpand4(!expand4)}>
                                 <AccordionSummary
                                     expandIcon={<ExpandMoreIcon style={{ color: colors.text }} />}
                                     aria-controls="panel1a-content"
@@ -249,7 +249,7 @@ export default function Responsive() {
                         textAlign: 'left'
                     }}>
                         <p style={{ color: colors.text }}>
-                            The WAVE evaluation tool was able to pick up a few relevant accessibility issues which primarily consisted of missing alt text for the images. Interestingly, WAVE identified a link within the page that did not have text on it. I was not previously aware that this was an issue. However, the tool points out that this can lead to confusing when using keyboard or audio readers. Additionally, I was able to find a broken tab navigation using manual inspection. It appears that you can properly navigate to the 'Select Time' button using tab navigation; however, you cannot select the button by hitting enter. This could have a drastic impact on people that rely on tab navigation to use the site.
+                            The WAVE evaluation tool was able to pick up a few relevant accessibility issues which primarily consisted of missing alt text for the images. Interestingly, WAVE identified a link within the page that did not have text on it. I was not previously aware that this was an issue. However, the tool points out that this can lead to confusion when using keyboard or audio readers. Additionally, I was able to find a broken tab navigation using manual inspection. It appears that you can properly navigate to the 'Select Time' button using tab navigation; however, you cannot select the button by hitting enter. This could have a drastic impact on people that rely on tab navigation to use the site.
                         </p>
                     </div>
                 </div>
@@ -302,11 +302,11 @@ export default function Responsive() {
                     </div>
                     <div>
                         <ol>
-                            <li>One of the main issues with the current site is that a user does not have a sense of where they are in the checkout process. This was likley why I was initially confused by the site, as I did not know if I was on the payment screen or simply an information screen. Therefore, this component shows the user where they are in the process: information, selecting their tickets, payment, or confirmation.</li>
+                            <li>One of the main issues with the current site is that a user does not have a sense of where they are in the checkout process. This was likely why I was initially confused by the site, as I did not know if I was on the payment screen or simply an information screen. Therefore, this component shows the user where they are in the process: information, selecting their tickets, payment, or confirmation.</li>
                             <li>In addition to the lack of progress indication, the current site does not identify the total purchase price until navigating to the final payment page. It would be nice to see a running total before this to make the checkout process run more smoothly and avoid possible surprises when checking out.</li>
-                            <li>The main improvement being made to the site is the consolodation of input fields. In the original page, there is a section to select your vist date and time followed immediately by a large amount of information. You must scroll past the paragraphs of information to find the ticket input fields. This is a very confusing and unintuitive process to go through. Therfore, by breaking the checkout process into different steps, and grouping the fields closer together, buying a ticket will likely be a more streamlined experience.</li>
+                            <li>The main improvement being made to the site is the consolodation of input fields. In the original page, there is a section to select your vist date and time followed immediately by a large amount of information. You must scroll past the paragraphs of information to find the ticket input fields. This is a very confusing and unintuitive process to go through. Therefore, by breaking the checkout process into different steps, and grouping the fields closer together, buying a ticket will likely be a more streamlined experience.</li>
                             <li>When the width of the user's screen hits a certain threshold, the position of the summary section will adjust to maintain its readability.</li>
-                            <li>Similar to the condition in annotation four, when the screen shrinks futher, the alignment of the date and time selects will switch to a column direction to prevent squishing of the inputs.</li>
+                            <li>Similar to the condition in annotation four, when the screen shrinks further, the alignment of the date and time selects will switch to a column direction to prevent squishing of the inputs.</li>
                         </ol>
                     </div>
                 </div>
@@ -440,11 +440,12 @@ export default function Responsive() {
                 <div class={styles.section} style={{ backgroundColor: colors.secondary }}>
                     <div id={styles.titleWrapper}>
                         <h2 style={{ color: colors.text }}>Redesigned Website:</h2>
+                        <h3 style={{ color: colors.text }}>Note: as addressed previously, I decided to create mockups for three different screens in the checkout process to best illustrate the redesigned site. However, I did not wireframe nor resdesign all three. The Figma representations are meerly a demonstration of what could be created.</h3>
                     </div>
                     <div>
                         <Carousel
                             style={{
-                                minHeight: '60vh'
+                                minHeight: '60vh',
                             }}
                             animation='slide'
                             autoPlay={false}
